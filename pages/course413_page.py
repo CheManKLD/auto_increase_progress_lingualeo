@@ -11,7 +11,7 @@ class Course413Page(BasePage):
         element = self.browser.find_element(*Course413PageLocators.OK_BUTTON)
         element.click()
         time.sleep(1)
-        element = self.browser.find_element(*Course413PageLocators.TRY_COURSE_BUTTON)
+        element = self.browser.find_element(*Course413PageLocators.START_COURSE_BUTTON)
         element.click()
 
         for _ in range(3):

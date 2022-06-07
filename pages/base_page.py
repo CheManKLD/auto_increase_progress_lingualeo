@@ -1,6 +1,11 @@
+import os
+
+from dotenv import load_dotenv
 from selenium import webdriver
 
 from .locators import BasePageLocators
+
+load_dotenv()
 
 
 class BasePage:
@@ -20,9 +25,9 @@ class BasePage:
         element.click()
 
         input1 = self.browser.find_element(*BasePageLocators.EMAIL_FORM)
-        input1.send_keys('email')  # сюда вставляем ваш email от аккаунта на Lingualeo
+        input1.send_keys(os.getenv('EMAIL'))  # сюда вставляем ваш email от аккаунта на Lingualeo
         input2 = self.browser.find_element(*BasePageLocators.PASSWORD_FORM)
-        input2.send_keys('password')  # сюда вставляем ваш пароль от аккаунта на Lingualeo
+        input2.send_keys(os.getenv('PASSWORD'))  # сюда вставляем ваш пароль от аккаунта на Lingualeo
         element = self.browser.find_element(*BasePageLocators.LOGIN_SUBMIT_BUTTON)
         element.click()
 

@@ -14,6 +14,7 @@ class Course413PageLocators:
         By.CSS_SELECTOR,
         '.ll-leokit__learn-course-lessons__module-card-button.ll-leokit__learn-course-lessons__module-card-button-green'
     )
+    START_COURSE_BUTTON = (By.CSS_SELECTOR, '.ll-leokit__learn-course-lessons__module-card-button')
     OK_BUTTON = (By.CSS_SELECTOR, '.ll-leokit__button__m-color-azul')
     RIGHT_ANSWER_1_CHECKBOX = (By.XPATH,
                                '//*[contains(text(), "чтобы сказать о нахождении предмета в каком-то месте")]')

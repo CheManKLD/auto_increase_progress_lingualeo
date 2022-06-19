@@ -32,7 +32,6 @@ def get_10_percent_of_progress(times=1):
     # выпоняем курс необходимое количество раз
     for _ in range(times):
         page.complete_course()
-        page.open()
 
     page.quit()
 
